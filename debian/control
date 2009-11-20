@@ -1,0 +1,39 @@
+Source: x11proto-core
+Section: x11
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Uploaders: David Nusinow <dnusinow@debian.org>, Julien Cristau <jcristau@debian.org>
+Build-Depends:
+ debhelper (>= 5.0.0),
+ automake,
+ xutils-dev (>= 1:7.4+4)
+Standards-Version: 3.8.3
+Vcs-Git: git://git.debian.org/git/pkg-xorg/proto/x11proto-core
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/proto/x11proto-core.git
+
+Package: x11proto-core-dev
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: X11 core wire protocol and auxiliary headers
+ This package provides development headers describing the wire protocol
+ for the core X11 protocol, and also provides a number of utility headers,
+ used to abstract OS-specific functions.
+ .
+ This package deprecates 'x-dev', a package from the monolithic builds of
+ XFree86 and X.Org.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ <URL:http://xorg.freedesktop.org>
+ <URL:http://lists.freedesktop.org/mailman/listinfo/xorg>
+ .
+ This package is built from the X.org xproto proto module.
+
+Package: x-dev
+Section: libdevel
+Architecture: all
+Depends: x11proto-core-dev
+Description: dummy package for transition purposes
+ This package is a dummy package for transition purposes, and only exists to
+ depend on x11proto-core-dev.  You may safely remove it if it will not
+ remove other packages.
