@@ -1,3 +1,108 @@
+x11proto-core (7.0.23-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build pdf docs.
+  * Set docdir in configure.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 14 Apr 2012 19:14:24 +0200
+
+x11proto-core (7.0.22-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump xutils-dev and xorg-sgml-doctools build-deps.
+  * Add xsltproc build-dep.
+  * Get rid of the temporary 01_keep_xorg_css.diff patch.
+  * Drop the css from .install accordingly.
+  * Use xorg-sgml-doctool's copy of xorg.css.
+  * Wrap (Build-)Depends.
+  * Don't install *.db yet, keep that for later.
+  * Update Uploaders list. Thanks, David!
+  * Switch to dh:
+    - Bump debhelper build-dep and compat.
+    - Use dh-autoreconf and quilt sequences.
+    - Rewrite debian/rules.
+  * Get rid of xsfbs accordingly.
+  * Bump Standards-Version to 3.9.2 (no changes).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 23 Jun 2011 11:01:17 +0200
+
+x11proto-core (7.0.21-3) unstable; urgency=low
+
+  * Mark x11proto-core-dev Multi-Arch: foreign, so that this arch: all
+    package satisfies the dependencies of foreign-arch packages.
+  * Install .pc file to /usr/share/pkgconfig instead of /usr/lib/pkgconfig.
+
+ -- Steve Langasek <vorlon@debian.org>  Fri, 17 Jun 2011 08:26:19 -0700
+
+x11proto-core (7.0.21-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 05 Apr 2011 23:28:42 +0200
+
+x11proto-core (7.0.21-1) experimental; urgency=low
+
+  * New upstream release:
+    - Brings Sinhala support, needed for the lk XKB keyboard layout.
+  * Update debian/copyright from upstream COPYING.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 26 Mar 2011 00:07:04 +0100
+
+x11proto-core (7.0.20-1) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Merge changes from the experimental branch (7.0.17-1 upload).
+
+  [ Robert Hooker ]
+  * New upstream release. Changes:
+    - 5d3428d... Add XF86XK_TouchpadOn/Off
+    - Various spec updates.
+
+  [ Cyril Brulebois ]
+  * Update debian/copyright from upstream's COPYING.
+  * Add 01_keep_xorg_css.diff temporarily.
+  * Add patching in debian/rules, and quilt build-dep accordingly.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 14 Jan 2011 04:18:40 +0100
+
+x11proto-core (7.0.19-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump xutils-dev build-dep for new macros.
+  * Add pkg-config build-dep.
+  * Add xmlto, xorg-sgml-doctools, and w3m build-dep for the specs.
+  * Pass --with-xmlto and --without-fop, we want html and txt only.
+  * Ship *.html, *.css, and *.txt from the doc directory.
+  * Kill *.xml in the doc directory, no point in shipping them.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 06 Nov 2010 02:33:18 +0100
+
+x11proto-core (7.0.18-1) unstable; urgency=low
+
+  [ Robert Hooker ]
+  * New upstream release.
+
+  [ Cyril Brulebois ]
+  * Update debian/copyright from upstream COPYING.
+  * Switch from --list-missing to --fail-missing for additional safety.
+  * No longer pass --disable-shared, this option is gone.
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 03 Nov 2010 01:17:11 +0100
+
+x11proto-core (7.0.17-1) experimental; urgency=low
+
+  * Get rid of the x-dev transitional package.
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+  * New upstream release.
+  * Bump xutils-dev build-dep for xorg-macros.
+  * Update debian/copyright.
+  * Bump Standards-Version to 3.9.0, no changes.
+
+ -- Julien Cristau <jcristau@debian.org>  Wed, 07 Jul 2010 18:21:51 +0100
+
 x11proto-core (7.0.16-1) unstable; urgency=low
 
   [ Julien Cristau ]
