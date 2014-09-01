@@ -1,3 +1,17 @@
+x11proto-core (7.0.26-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 14 Apr 2014 20:38:23 +0200
+
+x11proto-core (7.0.24-1) unstable; urgency=low
+
+  * New upstream release.
+    - handles x32 madness (closes: #695535)
+    - handles the lack of restrict on g++/solaris (closes: #695589)
+
+ -- Julien Cristau <jcristau@debian.org>  Sun, 09 Jun 2013 14:17:07 +0200
+
 x11proto-core (7.0.23-1) unstable; urgency=low
 
   * New upstream release.
